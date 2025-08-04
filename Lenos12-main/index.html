@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Leno App | Health & Productivity</title>
+  </head>
+
+  <body>
+     <div id="nav-placeholder"></div>
+
+  <!-- Conteúdo da página aqui -->
+
+
+<!-- Hero -->
+ <header class="hero">
+  <div class="hero__container container">
+    <div class="hero content">
+<h1 class="hero__title">
+Seu
+  <span class="hero__title--primary">produtividade</span>
+  assistente
+</h1>
+<p class="hero__description">
+  Aumente sua produtividade e melhore sua saúde com o Leno, o aplicativo completo para desenvolvedores e criadores.
+</p>
+<div class="hero__buttons">
+  <a href="download" class="hero__button btn">
+    <i class="fa-brands fa-apple"></i>
+    Para a Aple</a>
+     <a href="download" class="hero__button btn">
+    <i class="fa-brands fa-android"></i>
+    Para a Android</a>
+</div>
+    </div>
+    <div class="hero__imagem">
+      <img src="images/header-smartphones.png" alt="Leno app">
+    </div>
+  </div>
+ </header>
+
+
+<main>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptates quia voluptatibus sunt fugiat. Eius expedita sequi provident? Explicabo rerum error, amet voluptates fuga, tempore, quisquam provident dolores sequi ut aut porro quasi! Possimus, eum. Laudantium omnis doloremque ullam praesentium cum ut minus? Quasi, quae! At accusantium voluptate ipsam, hic autem cumque tempora? Nobis, mollitia eligendi?
+</main>
+
+
+  <script src="js/loadComponents.js"></script>
+
+   <script type="module">
+  import {
+    setupMenuToggle,
+    setupMenuStateOnLoad,
+    setupMenuResizeHandler,
+    setupMobileLinkClicks,
+  } from "./js/menu/menuEvents.js"
+
+  import { setupEventListeners, handleDOMContentLoaded } from "./js/themeEvents.js"
+  import { setupSystemThemeObserver } from "./js/themeSystem.js"
+
+  window.addEventListener("DOMContentLoaded", () => {
+    handleDOMContentLoaded()
+    setupEventListeners()
+    setupSystemThemeObserver()
+
+    setupMenuToggle()
+    setupMenuStateOnLoad()
+    setupMenuResizeHandler()
+    setupMobileLinkClicks()
+  })
+</script>
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

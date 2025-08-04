@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Leno <details></details></title>
+  </head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+   .main {
+
+    max-width: 1100px;
+    margin: 0 auto;
+  min-height: 100vh;
+
+
+  padding-top: 100px; /* ou o valor exato da altura da navbar */
+}
+
+  </style>
+  <body>
+    <div id="header-placeholder"></div>
+    <main class="main">
+      <h3>olá </h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga ut odit. Ullam harum nemo, porro sint et labore sequi dolore expedita soluta veniam. Voluptatibus quidem asperiores perspiciatis rerum sit nulla ab sequi reiciendis, tempora quos facere corrupti cumque dolorem, vitae neque dolores doloremque placeat quaerat ullam veritatis. Suscipit dolore cupiditate quod optio voluptas accusamus tenetur illum maiores esse dolorum?
+    </main>
+
+    <script type="module">
+      import {
+        setupMenuToggle,
+        setupMenuStateOnLoad,
+        setupMenuResizeHandler,
+        setupMobileLinkClicks,
+      } from "./js/menu/menuEvents.js"
+
+      import {
+        setupEventListeners,
+        handleDOMContentLoaded,
+      } from "./js/themeEvents.js"
+
+      import { setupSystemThemeObserver } from "./js/themeSystem.js"
+
+      // Carrega o header universal
+      window.addEventListener("DOMContentLoaded", async () => {
+        const headerPlaceholder = document.getElementById("header-placeholder")
+
+        const response = await fetch("components/header.html")
+        const headerHTML = await response.text()
+        headerPlaceholder.innerHTML = headerHTML
+
+        // Inicializa os scripts
+        handleDOMContentLoaded()
+        setupEventListeners()
+        setupSystemThemeObserver()
+
+        setupMenuToggle()
+        setupMenuStateOnLoad()
+        setupMenuResizeHandler()
+        setupMobileLinkClicks()
+      })
+    </script>
+<script src="js/404.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
